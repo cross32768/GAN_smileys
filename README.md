@@ -1,2 +1,20 @@
 # GAN_smileys
 Smiley Icon generationg by GAN
+
+GANを用いたsmileyアイコンの生成を目指したリポジトリです。
+今の所DCGANを用いています。
+
+以下、ファイル説明
+
+smileys_dataset_allには1250個ほどのsmileyアイコン画像が入っています。
+smileys_dataset_all_updateはそのdatasetを拡張したもので、2000個前後入っています（重複が大いにあると思われる）
+smileys_dataset_pureにはパーツ的に余計な要素の入っていないアイコンのみが入っていますが、データセットの数は600個前後になっています。
+
+generated_imagesにはDCGANを用いてsmileys_dataset_allを学習した結果の生成画像が入っています。
+discrminator.h5とgenerator.h5はその重みです。
+generated_images2にはsmileys_dataset_pureを学習した結果の生成画像が入っています。
+generated_images3にはsmileys_dataset_all_updatewを学習した結果の生成画像が入っています。
+generater2.h5とdiscriminator2.h5はその重みです。
+細かな設定は変えていますが、いずれもそこまで変化はなかったので記載していません。
+
+今の所全く精度の出ていない画像しか出来ていないので、今後データセットの拡張やGAN手法自体の変更を以て改良を試みる予定です。
